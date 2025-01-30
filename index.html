@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نعرض لك افضل منتجات العنايه بالبشره والشعر والصحه العامه باستخدام منتجات طبيعيه وعاليه الجوده ">
+    <meta name="keywords" content=" صحه الشعر , الصحه العامه , مكملات غذائيه , الصحه الجنسيه , علاج مشاكل البشره , صحه وتغذيه , الصحه والرفاهيه , صحه المفاصل ,صحه الجسم والوزن,عنايه بالبشره  , عنايه بالشعر, منتجات طبيعيه, علاج اثار حب الشباب ">
+    <title>TopLifeHealthyShop</title>
+    <link rel="shortcut icon" href="images/icons8-store-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="forever.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <img src="images/1697841935596 (1).png" alt="logo" width="100px">
+    
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span class="icon">☰</span>
+        </div>
+       
+        <div class="links">
+            <ul>
+                <a href="#"><li class="Active">Home</li></a>
+                <a href="#About-Us"><li>About</li></a>
+               <a href="#Care"> <li>Products</li></a>
+                <a href="#Footer"><li>Contact</li></a>
+            </ul>
+    
+        </div>
+        <div class="side-menu" id="sideMenu">
+            <div class="close-btn" onclick="toggleMenu()">X</div>
+            <ul>
+                <a href="#"><li class="Active">Home</li></a>
+                <a href="#About-Us"><li>About</li></a>
+                <a href="#Care"><li>Products</li></a>
+                <a href="#Footer"><li>Contact</li></a>
+            </ul>
+        </div>
+        <div class="cart-modal-overlay">
+            <div class="cart-modal">
+              <i id="close-btn" class="fas fa-times"></i>
+                <h1 class="cart-is-empty">Cart is empty</h1>
+              
+                <div class="product-rows">
+                </div>
+                <div class="total">
+                  <h1 class="cart-total">TOTAL</h1>
+                    <span class="total-price"> 0 AED</span>
+                      <button class="purchase-btn" id="purchaseBtn" onclick="openForm()">إتمام الطلب  </button>
+                </div>
+              </div>
+        </div>
+        <div class="cart-btn">
+            <i id="cart" class="fas fa-shopping-cart"></i>
+              <span class ="cart-quantity">0</span>
+          </div>
+       </nav>
+       <header>
+        <div class="header_content">
+            <h1>"<span>توب لايف</span>- طريقك للعناية المثالية"</h1>
+            <p>"اكتشفي منتجاتنا المميزة للعناية بالبشرة، الشعر، والصحة العامة. لأن جمالك وراحتك هما أولويتنا."</p>
+          
+        
+        </div>
+       </header>
+       <section class="about" id="About-Us">
+        <div class="container">
+            <h2>"توب لايف: لأن جمالكِ يبدأ بالعناية"</h2>
+        <p>🌿 منتجات طبيعية وآمنة</p>
+        <p>🚚 شحن مجاني سريع</p>
+        <p>💳 الدفع عند الاستلام</p>
+        <a href="#Care"><button>تسوق الأن</button></a>
+        </div>
+        
+       
+       </section>
+      
+       <div class="currency-selector">
+        <label for="currency">:اختر العملة</label>
+        <select id="currency" class="custom-select" onchange="updatePrices()">
+            <option value="AED" selected>درهم إماراتي (AED)</option>
+            <option value="USD">دولار أمريكي (USD)</option>
+            <option value="SAR">ريال سعودي (SAR)</option>
+        </select>
+    </div>
+    
+    <h1 class="Products_title" >  " 🌵مجموعات العناية المتكاملة🌵"</h1>
+    <div class="container swiper products" id="Care">
+        <div class="swiper-wrapper">
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-21_19-03-24-515 acne.png" alt="مجموعه حب الشباب" class="product" width="300px" height="300px">
+                <h2 class="product-name">مجموعه علاج حب الشباب</h2>
+                <p class="price">
+                    <span class="new-price ">165 AED</span>
+                    <span class="old-price">178 AED</span>
+                   
+                </p>
+                <button class="add-to-cart">Add to Cart</button>
+                <a href="aboutnoacne.html"><button class="Gallery">Gallery</button></a>
+            </div>
+            
+          
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-21_20-01-20-452 not eat.jpg" alt="مجموعه سد الشهيه " class="product" width="300px" height="300px">
+                <h2 class="product-name">مجموعه سد الشهيه</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">235 AED</span>
+                    <span class="old-price">252 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="abouteat.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-23_16-10-57-119kidsss.png" alt="مجموعه التركيز وزياده مناعه الاطفال" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه التركيز وزياده مناعه الاطفال </h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">188 AED</span>
+                    <span class="old-price">203 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutkidsgroup.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-23_17-31-07-684.menssssspng.png" alt="مجموعه زياده القدره الجنسيه للرجال" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه زياده القدره الجنسيه للرجال"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">228 AED</span>
+                    <span class="old-price">245 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutmensgroup.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-23_23-42-58-703faaat.png" alt="    مجموعه حرق الدهون" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه    حرق الدهون"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">164 AED</span>
+                    <span class="old-price">176 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutfatsgroup.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_00-23-56-798skins.png" alt="      مجموعه توحيد لون البشره" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه     توحيد لون البشره"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">290 AED</span>
+                    <span class="old-price">311 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutskin.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_00-43-51-993 thin.png" alt="      مجموعه   تنحيف الكرش" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه تنحيف الكرش"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">165 AED</span>
+                    <span class="old-price">177 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutthin.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_15-27-10-298 drop.png" alt="      مجموعه    علاج الصدقه والاكزيما" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه  علاج الصدفيه والاكزيما"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">268 AED</span>
+                    <span class="old-price">287 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutEczema.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_15-57-56-998hairfail.png" alt="      مجموعه      العنايه بالشعر" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه    العنايه بالشعر"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">221 AED</span>
+                    <span class="old-price">236 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="abouthairfail.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_16-16-10-794offf.png" alt="      مجموعه      علاج البواسير والامساك" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه     علاج البواسير والامساك "</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">229 AED</span>
+                    <span class="old-price">246 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutoff.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_16-53-25-36kawlon.png" alt="      مجموعه      القاولون العصبي  =" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه       القاولون العصبي "</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">360 AED</span>
+                    <span class="old-price">385 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutkawlon.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/Picsart_25-01-24_18-56-54-834altraaa fat.png" alt="      مجموعه       التسمين   =" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مجموعه        التسمين "</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">309 AED</span>
+                    <span class="old-price">332 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutfatss.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/f15_beginners_-_chocolate_pd_main_512_X_512_1609307130414.jpg" alt="             إف ١٥ - مبتدئ 1 و 2 نكهة الشوكولاتة   =" class="product" width="300px" height="300px">
+                <h2 class="product-name">       (F15)  روتين اللياقة والتغذية </h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">620 AED</span>
+                    <span class="old-price">671 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutf15.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_mini_beauty_pak_pd_main_512_X_512_1609328400408.jpg" alt="            علبة الجمال من فوريفر  =" class="product" width="300px" height="300px">
+                <h2 class="product-name"> علبة الجمال من فوريفر</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">899 AED</span>
+                    <span class="old-price">967 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutbeuty.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/mini_fitness_pack_pd_main_512_X_512_1610882409489.jpg" alt="          علبة الصحة من فوريفر =" class="product" width="300px" height="300px">
+                <h2 class="product-name"> "علبة الصحة من فوريفر"</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">899 AED</span>
+                    <span class="old-price">967 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutfitness.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/favorites_combo_pack_pd_main_512_X_512_1609308423578.jpg" alt="          علبة منتجات فوريفر المفضلة" class="product" width="300px" height="300px">
+                <h2 class="product-name"> علبة منتجات فوريفر المفضلة</h2>
+                <p class="price" id="price_2">
+                    <span class="new-price ">1790 AED</span>
+                    <span class="old-price">1934 AED</span>
+                    
+                </p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutcombo.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            
+   
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- </div> -->
+     
+       <h1 class="Products_title" >  " 🌵منتجات العنايه 🌵"</h1>
+       <div class="container swiper products" id="Care">
+        <div class="swiper-wrapper">
+            <div class="card-item swiper-slide">
+                <img src="images/avocado_face___body_soap_pd_category_256_X_256_1608021084731.jpg" alt="Avocado soap" class="product" width="300px" height="300px">
+                <h2 class="product-name">صابون ألأفوكادو للوجه</h2>
+                <p class="price" id="price_1">29 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutsoap.html"><button class="Gallery">Gallery </button></a>
+            </div>
+          
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_sunscreen_pd_zoomedimage_1000_X_1000_1611128251333.jpg" alt="sun screen " class="product" width="300px" height="300px">
+                <h2 class="product-name">ألو صن اسكرين</h2>
+                <p class="price" id="price_2">81 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutsun.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            
+            
+            
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_propolis_creme_pd_zoomedimage_1000_X_1000_1607854245606.jpg" alt=" cream" class="product" width="300px" height="300px">
+                <h2 class="product-name">   ألو بروبوليس كريم   </h2>
+                <p class="price" id="price_3">85 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutbroboles.html"><button class="Gallery">Gallery </button></a>
+            </div>
+           
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_msm_gel_pd_zoomedimage_1000_X_1000_1607848257768.jpg" alt="  msm" class="product" width="300px" height="300px">
+                <h2 class="product-name">  ألو ام اس ام جيل  </h2>
+                <p class="price" id="price_4">105 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutmsm.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            
+            <div class="card-item swiper-slide">
+                <img src="images/desire_by_forever_pd_main_512_X_512_1725273047838.jpg" alt="  men deodrent " class="product" width="300px" height="300px">
+                <h2 class="product-name">   ديزاير ديدوران رجالي</h2>
+                <p class="price" id="price_5">25 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutdesire.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/alpha-e_factor_pd_main_512_X_512_1607584361870.jpg" alt="  e factor " class="product" width="300px" height="300px">
+                <h2 class="product-name">    ألفا إي-فاكتور</h2>
+                <p class="price" id="price_6">142 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutfactor.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/sonya_illuminating_gel_pd_zoomedimage_1000_X_1000_1607410817603.jpg" alt="  illuminating gel " class="product" width="300px" height="300px">
+                <h2 class="product-name">    جل لبشرة مشرقة</h2>
+                <p class="price" id="price_7">94 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutgel.html"><button class="Gallery">Gallery </button></a>
+            </div>
+           
+            <div class="card-item swiper-slide">
+                <img src="images/dream_by_forever_pd_main_512_X_512_1725271977208.jpg" alt="  woman deotrant  " class="product" width="300px" height="300px">
+                <h2 class="product-name">    دريـم ديدوران نسائي   </h2>
+                <p class="price" id="price_8">25 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutdream.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_heat_lotion_pd_zoomedimage_1000_X_1000_1607846951607.jpg" alt=" heat lotion" class="product" width="300px" height="300px">
+                <h2 class="product-name">   ألو هيت لوشن  </h2>
+                <p class="price" id="price_9">64 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutheat.html"><button class="Gallery">Gallery </button></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <h1 class="Products_title">  "🌵منتجات العنايه بالشعر"🌵 </h1>
+    <div class="container swiper products" id="Care">
+        <div class="swiper-wrapper">
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_jojoba_conditioner_pd_main_512_X_512_1671452731744.jpg" alt=" conditioner" class="product" width="300px" height="300px">
+                <h2 class="product-name"> بلسم آلو جوجوبا </h2>
+                <p class="price" id="price_10">93 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="about conditioner.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/ALOE_JOJOBA_SHAMPOO_pd_zoomedimage_1000_X_1000_1659607931568.jpg" alt=" Shampoo" class="product" width="300px" height="300px">
+                <h2 class="product-name"> ألو جوجوبا شامبو</h2>
+                <p class="price" id="price_11">87 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutshampoo.html"><button class="Gallery">Gallery </button></a>
+            </div>
+          
+            <div class="card-item swiper-slide">
+                <img src="images/nourishing_hair_oil_pd_main_512_X_512_1732001373592.jpg" alt="  hair oil" class="product" width="300px" height="300px">
+                <h2 class="product-name">  زيت الشعر</h2>
+                <p class="price" id="price_12">107 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutoil.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_vera_gelly__tube__pd_main_512_X_512_1607847809652.jpg" alt=" gelly" class="product" width="300px" height="300px">
+                <h2 class="product-name">  ألوفيرا جيلي   </h2>
+                <p class="price" id="price_13">64 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutgelly.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/aloe_first_spray_pd_main_512_X_512_1608027500400.jpg" alt="  aloe spray " class="product" width="300px" height="300px">
+                <h2 class="product-name">    ألوة فيرست  </h2>
+                <p class="price" id="price_14">85 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutfirst.html"><button class="Gallery">Gallery </button></a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <h1 class="Products_title">  "🌵منتجات التغذيه"🌵</h1>
+    <div class="container swiper products" id="Care">
+        <div class="swiper-wrapper">
+           
+            <div class="card-item swiper-slide">
+                <img src="images/forever_vitolize_men_pd_category_256_X_256_1606632805690.jpg" alt="Avocado soap" class="product" width="300px" height="300px">
+                <h2 class="product-name"> مكمل لدعم حيويه الرجل</h2>
+                <p class="price" id="price_15">131 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutvitolize.html"><button class="Gallery">Gallery </button></a>
+            </div>
+          
+            <div class="card-item swiper-slide">
+                <img src="images/___________________pd_main_512_X_512_1601534025975.png" alt=" فوريفر ألوفيرا جل" class="product" width="300px" height="300px">
+                <h2 class="product-name">  فوريفر ألوفيرا جل</h2>
+                <p class="price" id="price_17">109 AED</p>
+                <button class="add-to-cart">Add to card </button>
+                <a href="aboutalovera.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_calcium_pd_category_256_X_256_1606291660196.jpg" alt="calcum" class="product" width="300px" height="300px">
+                <h2 class="product-name">فوريفر كالسيوم</h2>
+                <p class="price" id="price_18">105 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutcalcum.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/nature-min_pd_zoomedimage_1000_X_1000_1606113380127.jpg" alt="nature men" class="product" width="300px" height="300px">
+                <h2 class="product-name">فوريفر نيتشر-مين</h2>
+                <p class="price" id="price_19">78 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutnature.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_arctic_sea_pd_main_512_X_512_1606637473426.jpg" alt="arctic sea " class="product" width="300px" height="300px">
+                <h2 class="product-name">فوريفر أركتيك سي</h2>
+                <p class="price" id="price_20">138 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutarctic.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_fiber_pd_main_512_X_512_1608186690041.jpg" alt="fiber " class="product" width="300px" height="300px">
+                <h2 class="product-name">  فوريفر فايبر</h2>
+                <p class="price" id="price_21">125 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutfiber.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/frvr_lt_u_amntn-vanilla_pouch_pd_main_512_X_512_1608017405815.jpg" alt="ultra vanilla " class="product" width="300px" height="300px">
+                <h2 class="product-name">   فورايفر لايت الترا</h2>
+                <p class="price" id="price_22">133 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutaltra.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_therm_pd_main_512_X_512_1608016255189.jpg" alt="therm" class="product" width="300px" height="300px">
+                <h2 class="product-name">    فوريفر ثيرم </h2>
+                <p class="price" id="price_23">124 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="abouttherm.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/garcinia_plus_pd_main_512_X_512_1608015070130plusss.jpg" alt="فوريفر جارسينيا بلس" class="product" width="300px" height="300px">
+                <h2 class="product-name">    فوريفر جارسينيا بلس</h2>
+                <p class="price" id="price_23">143 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutgarcenia.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_kids_pd_category_256_X_256_1608114580498.jpg" alt="  فوريفر كيدز" class="product" width="300px" height="300px">
+                <h2 class="product-name">    فوريفر كيدز</h2>
+                <p class="price" id="price_23">65 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutkids.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            <div class="card-item swiper-slide">
+                <img src="images/forever_bee_propolis_pd_main_512_X_512_1606111819108bee.jpg" alt="   فوريفر بي بروبوليس" class="product" width="300px" height="300px">
+                <h2 class="product-name">     فوريفر بي بروبوليس</h2>
+                <p class="price" id="price_23">138 AED</p>
+                <button class="add-to-cart">Add to card</button>
+                <a href="aboutbee.html"><button class="Gallery">Gallery </button></a>
+            </div>
+            
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+      
+
+
+
+
+
+    <div class="faq-container">
+        <div class="faq-item" onclick="toggleAnswer(this)">
+          <div class="faq-question">ليه تشترى مننا؟  🌿</div>
+          <div class="faq-answer">
+            <p>منتجاتنا طبيعية ومعتمدة من عدة جهات عالمية. إليك بعض الشهادات التي حصلنا عليها</p>
+            <ul>
+              <li><strong>شهادة المجلس الدولي للألوفيرا (IASC):</strong> جودة عالية وألوفيرا نقية.</li>
+              <li><strong>شهادات GMP:</strong> ممارسات التصنيع الجيدة لضمان الجودة.</li>
+              <li><strong>شهادة ISO:</strong> معايير الجودة الدولية في التصنيع.</li>
+              <li><strong>شهادات حلال وKosher:</strong> متوافقة مع معايير شرعية وغذائية عالمية.</li>
+              <li><strong>شهادة خلو من الكائنات المعدلة وراثيًا (Non-GMO):</strong> منتجاتنا خالية من الكائنات المعدلة وراثيًا.</li>
+              <p>لدينا شهادات معتمدة عالميًا لضمان جودة منتجاتنا:</p>
+              <li><strong>شهادة ISO:</strong> معايير جودة الإنتاج.</li>
+              <li><strong>شهادات GMP:</strong> ممارسات التصنيع الجيدة لضمان السلامة والجودة.</li>
+              <li><strong>شهادات حلال وKosher:</strong> متوافقة مع معايير شرعية وغذائية دولية.</li>
+              <li><strong>شهادة Non-GMO:</strong> منتجات خالية من الكائنات المعدلة وراثيًا.</li>
+            </ul>
+          </div>
+        </div>
+    
+      
+      </div>
+          
+
+    <section class="member">
+        <h2> <img src="images/plant.png" alt="plant" width="80px">تسجيل عضويه في شركه فوريفر  <img src="images/plant.png" alt="plant" width="80px">    </h2>
+        <p>"🌵انضم الي عضويه فوريفر وتمتع بخصومات كبيره وعروض مميزه علي كل منتجاتنا🌵"</p>
+        <a href="https://m.foreverliving.com/mobile/join.do?store=SAU&language=en&menuoff=y&distribID=971001643357"><img src="images/foreverlogo-removebg-preview.png" alt="forever logo">سجل عضويتك الأن</a>
+    </section>
+<br>
+<br>
+
+
+    <hr>
+
+    <footer id="Footer">
+        
+        <p class="p-foot">"نقدم مجموعة واسعة من منتجات العناية بالبشرة، الشعر، و الصحة العامة.  جميع منتجاتنا تم اختيارها بعناية لتلبية احتياجاتك الطبيعية."</p>
+        <div class="footer-content">
+            <div class="logos">
+           
+            
+                <a href="https://www.facebook.com/TopLife01?mibextid=ZbWKwL"><img src="images/icons8-facebook-48.png" alt="facebook"></a>
+                <a href="https://wa.me/201500380857"><img src="images/icons8-whatsapp-48.png" alt="whatsapp"></a>
+                <a href=""><img src="images/icons8-tiktok-50.png" alt="tik tok"></a>
+                <a href="https://www.instagram.com/toplife.healthyshop?igsh=MTZoaHc4ZmRoc3RiZA=="><img src="images/icons8-instagram-48.png" alt="instgram"></a>
+    
+            </div>
+            <div class="Mobile">
+                
+                <p>tel:(+20) 150-038-0857</p>
+            </div>
+          
+        </div>
+     </footer>
+     <div class="order-form-overlay"></div> 
+<div id="orderForm" class="order-form">
+    <i id="close-form-btn" class="fas fa-times close-form-btn"></i>
+  <h2>أدخل بياناتك</h2>
+  <form>
+    <input type="text" id="userName" placeholder="الاسم" required />
+    <input type="text" id="userAddress" placeholder="  العنوان بالتفصيل" required />
+    <input type="tel" id="userPhone" placeholder="رقم الهاتف" required />
+    <div id="orderDetails"></div>
+    <button type="button" id="sendOrder">إرسال الطلب</button>
+   
+  </form>
+</div>
+    
+
+
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="currencuApi.js"></script>
+    <script src="forever.js"></script>
+</body>
+</html>
