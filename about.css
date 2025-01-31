@@ -217,21 +217,6 @@ direction: rtl;}
 }
 
 
-
-.product-details-extra::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: #FF7F50;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0.1;
-    pointer-events: none;
-}
 /* nav media */
 .side-menu {
     position: fixed;
@@ -460,3 +445,326 @@ direction: rtl;}
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* about.css */
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px; 
+    width: 350px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 100000000;
+    overflow-y: auto; 
+}
+
+.cart-sidebar.active {
+    right: 0; /* إظهار السلة عند النقر */
+}
+
+.cart-sidebar h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 20px;
+    color: #555;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    background-color: #FF7429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-controls button:hover {
+    background-color: #e65c1a;
+}
+
+.quantity-controls span {
+    font-size: 16px;
+    color: #333;
+}
+
+.cart-item button {
+    padding: 5px 10px;
+    background-color: #FF7429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #c82333;
+}
+
+#cart-total {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF7429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #e65c1a;
+}
+
+.cart-icon {
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.cart-icon i {
+    font-size: 50px;
+    color: black;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #FF7429;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+/* about.css */
+
+.order-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1001;
+    width: 90%;
+    max-width: 400px;
+}
+
+.order-form h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.order-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.order-form input:focus {
+    border-color: #FF7429;
+    outline: none;
+}
+
+.order-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF7429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+    background-color: #e65c1a;
+}
+
+.close-form-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-form-btn:hover {
+    color: #FF7429;
+}
+
+/* about.css */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+}
+
+.cart-item-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 30px;
+    color: #333;
+    margin: 0;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #FF7429;
+    margin: 5px 0;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    background-color: #FF7429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-controls button:hover {
+    background-color: #e65c1a;
+}
+
+.quantity-controls span {
+    font-size: 30px;
+    color: #333;
+}
+
+.remove-item {
+    padding: 5px 10px;
+    background-color: #FF7429;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #c82333;
+}
+/* about.css */
+
+/* تنسيق علامة إغلاق السلة */
+.close-cart-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-cart-btn:hover {
+    color: #FF7429; /* تغيير اللون عند hover */
+}
+
+/* تنسيق علامة إغلاق الفورم */
+.close-form-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-form-btn:hover {
+    color: #FF7429; /* تغيير اللون عند hover */
+}

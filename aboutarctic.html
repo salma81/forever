@@ -6,6 +6,7 @@
     <title>TopLifeHealthyShop</title>
     <link rel="shortcut icon" href="images/icons8-store-50.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
@@ -14,27 +15,11 @@
             <img src="images/1697841935596 (1).png" alt="logo" width="100px">
     
         </div>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span class="icon">☰</span>
-        </div>
        
-        <div class="links">
-            <ul>
-                <a href="index.html"><li class="Active">Home</li></a>
-                <a href="index.html"><li>About</li></a>
-               <a href="index.html"> <li>Products</li></a>
-                <a href="index.html"><li>Contact</li></a>
-            </ul>
-    
-        </div>
-        <div class="side-menu" id="sideMenu">
-            <div class="close-btn" onclick="toggleMenu()">X</div>
-            <ul>
-                <a href="index.html"><li class="Active">Home</li></a>
-                <a href="index.html"><li>About</li></a>
-               <a href="index.html"> <li>Products</li></a>
-                <a href="index.html"><li>Contact</li></a>
-            </ul>
+       
+        <div class="cart-icon close-cart-btn" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
         </div>
        </nav>
        <div class="containers">
@@ -52,8 +37,11 @@
                 
                 يتميز فوريفر أركتيك سي® بمزيج من الزيوت لتزويدك بمكمل أوميجا 3. تدعم الأسماك والكالاماري وزيت الزيتون الأوليك صحةالجسم ، بما في ذلك صحة القلب والأوعية الدموية والجهاز الهضمي والمناعي و صحةالدماغ والعين.            </p>        
   <p class="product-price">Price: <strong>138 AED</strong></p>
-            <a href="index.html"><button class="order-button" >اطلب الآن</button></a>
-            <div class="product-extras">
+  <a href="index.html#fat"><button class="order-button" > استكشف منتجاتنا</button></a>
+  <br>
+  <br>
+  <button class="add-to-cart order-button" onclick="addToCart()">Add to Cart</button>
+  <div class="product-extras">
                 <ul>
                     <li>شحن سريع</li>
                     <li>الدفع عند الاستلام</li>
@@ -62,6 +50,12 @@
             </div>
             <div class="rating">★★★★☆ (4.5 / 5)</div>
         </div>
+    </div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <i class="fas fa-times close-cart-btn" onclick="toggleCart()"></i> <!-- علامة إغلاق السلة -->
+        <div id="cart-items"></div>
+        <p id="cart-total">الإجمالي<br> 0 AED</p>
+        <button class="checkout-button" onclick="openOrderForm()">إتمام الشراء</button>
     </div>
     <div class="product-details-extra">
         <h2 class="section-title">تفاصيل إضافية  <img src="images/plant.png" alt="plant" width="120px"></h2>
@@ -113,6 +107,17 @@
         
           
         </div>
+    </div>
+    <div id="orderForm" class="order-form">
+        <i class="fas fa-times close-form-btn" onclick="closeOrderForm()"></i> <!-- علامة إغلاق الفورم -->
+        <h2>أدخل بياناتك</h2>
+        <form>
+            <input type="text" id="userName" placeholder="الاسم" required />
+            <input type="text" id="userAddress" placeholder="العنوان بالتفصيل" required />
+            <input type="tel" id="userPhone" placeholder="رقم الهاتف" required />
+            <div id="orderDetails"></div>
+            <button type="button" id="sendOrder" onclick="submitOrder()">إرسال الطلب</button>
+        </form>
     </div>
     <script src="about.js"></script>
 </body>
